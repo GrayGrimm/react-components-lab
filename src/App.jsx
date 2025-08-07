@@ -1,3 +1,5 @@
+import WeatherData from "./components/WeatherForecast/WeatherForecast";
+
 
 const weatherForecasts = [
   {
@@ -42,7 +44,7 @@ const App = () => {
 
   return (
     <>
-      <h1>Local Weather</h1>
+      <WeatherData />
       <section>
         <div className="weather">
           <h2>Day of the Week</h2>
