@@ -1,5 +1,5 @@
 const WeatherData = (props) => {
-    const { id, day, img, imgAlt, conditions, time } = props
+    const { day, img, imgAlt, conditions, time } = props
     return (
         <>
             <h2>Day of the Week: {day}</h2>

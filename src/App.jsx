@@ -1,4 +1,5 @@
-import WeatherData from "./components/WeatherForecast/WeatherForecast";
+import WeatherData from "./components/WeatherForecast/WeatherForecast.jsx";
+import "./components/WeatherForecast/WeatherForecast.css";
 
 
 const weatherForecasts = [
