@@ -3,6 +3,7 @@ import WeatherData from "./components/WeatherForecast/WeatherForecast";
 
 const weatherForecasts = [
   {
+    id: 1,
     day: 'Mon',
     img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-components-lab/assets/day.svg',
     imgAlt: 'sun icon',
@@ -10,6 +11,7 @@ const weatherForecasts = [
     time: 'Morning',
   },
   {
+    id: 2,
     day: 'Tue',
     img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-components-lab/assets/night.svg',
     imgAlt: 'moon icon',
@@ -17,6 +19,7 @@ const weatherForecasts = [
     time: 'Night',
   },
   {
+    id: 3,
     day: 'Wed',
     img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-components-lab/assets/stormy.svg',
     imgAlt: 'clouds with lightning icon',
@@ -24,6 +27,7 @@ const weatherForecasts = [
     time: 'All Day',
   },
   {
+    id: 4,
     day: 'Thu',
     img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-components-lab/assets/cloudy-day.svg',
     imgAlt: 'sun overcast by clouds icon',
@@ -31,6 +35,7 @@ const weatherForecasts = [
     time: 'Evening',
   },
   {
+    id: 5,
     day: 'Fri',
     img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-components-lab/assets/cloudy-night.svg',
     imgAlt: 'moon overcast by clouds icon',
@@ -44,15 +49,16 @@ const App = () => {
 
   return (
     <>
-      <WeatherData />
+      <h1>Local Weather</h1>
       <section>
+       {weatherForecasts.map((forecast) => (
         <div className="weather">
-          <h2>Day of the Week</h2>
-          <img src="" alt="" />
-          <p><span>conditions: </span>current weather conditions</p>
-          <p><span>time: </span>time of day</p>
+        <WeatherData
+        key={forecast.id}
+        {...forecast}
+        />
         </div>
-
+        ))}
       </section>
     </>
 

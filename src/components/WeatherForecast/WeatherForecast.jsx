@@ -1,7 +1,12 @@
 const WeatherData = (props) => {
+    const { id, day, img, imgAlt, conditions, time } = props
     return (
-        <h1>Local Weather</h1>
-        
+        <>
+            <h2>Day of the Week: {day}</h2>
+            <img src={img} alt={imgAlt} />
+            <p><span>conditions: </span>{conditions}</p>
+            <p><span>time: </span>{time}</p>
+        </>
     );
 };
 
